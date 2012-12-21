@@ -601,6 +601,15 @@ config MACH_MSM7X30_FLUID
        help
          Support for the Qualcomm MSM7x30 FLUID eval board.
 
+config MACH_SEMC_HALLON
+       depends on ARCH_MSM7X30
+       depends on !MSM_STACKED_MEMORY
+       select SUPPORT_ALIEN_USB_CHARGER
+       default y
+       bool "SEMC_HALLON"
+       help
+         Support for the SEMC HALLON device.
+
 config MACH_SAPPHIRE
 	depends on ARCH_MSM7X01A
 	default n
